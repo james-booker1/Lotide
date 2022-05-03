@@ -6,11 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function(){
-let newArray = words.slice(1, 3) 
-console.log(newArray)
-}
+const tail = function() {
+  let newArray = words.slice(1, 3);
+  console.log(newArray);
+};
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); 
+tail(words);
 assertEqual(words.length, 3);
