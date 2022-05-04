@@ -21,11 +21,15 @@ const eqArrays = function (actual, expected) {
 const middle = function (array) {
   //console.log(Math.floor(arr.length / 2));
   let empty = [];
-  if (array.length === 1 || array.length === 2) {
+  if (array.length < 3) {
     return empty;
   }
   if (array.length % 2 !== 0) {
-    return (array.length + 1) / 2;
+    let example = Math.floor(array.length / 2);
+    let middleNumber = array[example];
+    //console.log(example);
+    return [middleNumber];
+    //console.log(array[array.length / 2])); //return
   }
   if (array.length % 2 === 0) {
     empty.push(array.length / 2);
@@ -33,3 +37,5 @@ const middle = function (array) {
     return empty;
   }
 };
+console.log(middle([10, 20, 30, 40, 50]));
+console.log(middle([1, 2, 3, 4, 5, 6, 7, 8]));
