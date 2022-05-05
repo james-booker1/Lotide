@@ -24,6 +24,7 @@ const eqObjects = function (object1, object2) {
         }
         return false;
       }
+      // Need to loop through object inside the object
       if (object1[key] !== object2[key]) {
         return false;
       }
@@ -46,3 +47,7 @@ const assertObjectsEqual = function (actual, expected) {
 };
 
 assertObjectsEqual({ a: "1", b: 2 }, { b: 2, a: "1" });
+assertObjectsEqual(
+  { a: "1", b: 2, c: { d: 3 } },
+  { b: 2, a: "1", c: { d: 3 } }
+);
