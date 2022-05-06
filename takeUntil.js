@@ -48,3 +48,10 @@ const results2 = takeUntil(data2, (x) => x === ",");
 console.log(results2);
 
 const test = [6, 8, 10, 11, 6, 12];
+
+const test3 = [6, 2, 40, 4, 5, 6];
+
+assertArraysEqual(
+  takeUntil(test3, (x) => x % 2 !== 0),
+  [6, 2, 40, 4]
+);
