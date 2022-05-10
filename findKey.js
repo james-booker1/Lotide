@@ -1,3 +1,7 @@
+
+const assertArraysEqual = require('./assertArraysEqual')
+const eqArrays = require('./eqArrays')
+/*
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`🟢Assertion Passed:  ${actual}  ===   ${expected}`);
@@ -5,7 +9,7 @@ const assertEqual = function (actual, expected) {
     console.log(`🔴Assertion Failed:   ${actual}   !==   ${expected}`);
   }
 };
-
+*/
 const findKey = function (object, callback) {
   for (let key in object) {
     if (callback(object[key])) {
@@ -26,7 +30,7 @@ findKey(
   },
   (x) => x.stars === 2
 );
-
+/*
 assertEqual(
   findKey(
     {
@@ -41,3 +45,6 @@ assertEqual(
   ),
   "Mike"
 );
+*/
+
+module.exports = findKey
